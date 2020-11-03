@@ -2,5 +2,9 @@
   <app-pokemon-card
     *ngFor="let pokemon of pokemons"
     [url]="pokemon.url"
+    infiniteScroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="550"
+    (scrolled)="onScroll()"
   ></app-pokemon-card>
 </div>

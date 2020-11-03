@@ -10,10 +10,18 @@ export class PokemonListComponent implements OnInit {
 
   public pokemons;
   public open = false;
+  public position = 0;
 
   constructor(protected _pokemonService: PokemonService) { }
 
   ngOnInit(): void {
-    this._pokemonService.getPokemons().subscribe(res => this.pokemons = res);
+    this._pokemonService.getPokemons(this.position).subscribe(res => this.pokemons = res);
+  }
+
+  onScroll() {
+    this.position++;
+    if (this.position%20 === 0) {
+      this._pokemonService.getPokemons(this.position).subscribe(res => {this.pokemons.push(...res); console.log(this.pokemons);});
+    }
   }
 }
