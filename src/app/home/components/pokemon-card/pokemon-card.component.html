@@ -1,4 +1,19 @@
-<div *ngIf="pokemon" (click)="open=!open" class="card-header type-{{pokemon.types[0].type['name']}}">
-  <img [src]="pokemon.sprites.front_default" alt="poke">
-  <p>{{pokemon.name.toUpperCase()}}</p>
+<div *ngIf="pokemon">
+  <div 
+    class="card-header type-{{pokemon.types[0].type['name']}}"
+    [ngClass]="{'card-header-pressed': open}"
+    (click)="open=!open"
+  >
+    <img [src]="pokemon.sprites.front_default" alt="poke">
+    <p>{{pokemon.name.toUpperCase()}}</p>
+  </div>
+  <div *ngIf="open" class="card-info">
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+    <p>aaa</p>
+  </div>
 </div>
