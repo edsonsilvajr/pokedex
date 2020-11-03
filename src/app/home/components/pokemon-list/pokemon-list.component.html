@@ -1,0 +1,8 @@
+<div class="cards-container">
+  <div class="cards">
+    <app-pokemon-card
+      *ngFor="let pokemon of pokemons"
+      [url]="pokemon.url"
+    ></app-pokemon-card>
+  </div>
+</div>
