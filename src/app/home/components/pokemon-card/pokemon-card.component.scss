@@ -1,9 +1,16 @@
 .card-header{
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
+  //border: 1px solid black;
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px;
   align-items: center;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.card-header:hover {
+  transform: translateX(-8px) translateY(-8px);
+  box-shadow: 0px 8px 8px #00000029;
 }

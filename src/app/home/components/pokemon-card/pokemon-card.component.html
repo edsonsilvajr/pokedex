@@ -1,5 +1,4 @@
-<div *ngIf="pokemon" class="card-header">
+<div *ngIf="pokemon" (click)="open=!open" class="card-header">
   <img [src]="pokemon.sprites.front_default" alt="poke">
-  <p (click)="open=!open">{{pokemon.name.toUpperCase()}}</p>
+  <p>{{pokemon.name.toUpperCase()}}</p>
 </div>
-<!-- <img [src]="pokemon.sprite.back_default" alt=""> -->
