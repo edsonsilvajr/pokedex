@@ -5,6 +5,7 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FormsModule } from '@angular/forms';
 
 const routes : Routes = [
   {path: '', component: HomeComponent}
@@ -14,7 +15,8 @@ const routes : Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    FormsModule
   ],
   declarations: [
     PokemonCardComponent,

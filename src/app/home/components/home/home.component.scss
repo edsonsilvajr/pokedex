@@ -1,6 +1,15 @@
 .header {
+  display:block;
   height: 200px;
   background-color: #ee1515;
+  border-bottom: 20px solid black;
+}
+
+.header::after{
+  content: '';
+  height: 100px;
+  width: 100px;
+  border: 10px solid grey;
 }
 
 h1 {

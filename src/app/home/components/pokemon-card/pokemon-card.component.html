@@ -4,7 +4,8 @@
     [ngClass]="{'card-header-pressed': open}"
     (click)="open=!open"
   >
-    <img [src]="pokemon.sprites.front_default" alt="poke">
+    <img src="assets/pokeball.png" alt="a" class="image">
+    <img [src]="pokemon.sprites.front_default" alt="poke" class="image-poke">
     <p>{{pokemon.name.toUpperCase()}}</p>
   </div>
   <div *ngIf="open" class="card-info">

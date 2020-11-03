@@ -1,10 +1,11 @@
+<input [(ngModel)]="searchParam" (change)="dynamicSearch()" type="text">
 <div class="cards-container">
   <app-pokemon-card
     *ngFor="let pokemon of pokemons"
     [url]="pokemon.url"
     infiniteScroll
-    [infiniteScrollDistance]="1"
-    [infiniteScrollThrottle]="550"
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="3000"
     (scrolled)="onScroll()"
   ></app-pokemon-card>
 </div>
