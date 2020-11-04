@@ -3,13 +3,63 @@
   height: 200px;
   background-color: #ee1515;
   border-bottom: 20px solid black;
+  position: relative;
 }
 
-.header::after{
-  content: '';
+.search-header {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.button{
+  left: 20%;
   height: 100px;
   width: 100px;
-  border: 10px solid grey;
+  border: 10px solid black;
+  background: rgb(255,255,255);
+  background: linear-gradient(149deg, rgba(255,255,255,1) 59%, rgba(187,187,187,1) 100%);
+  border-radius: 60px;
+  animation: 2.5s roll-in ease-in-out;
+  z-index: 1;
+}
+
+.poke-search {
+  left: calc(20% + 120px);
+  height: 30px;
+  width: 50%;
+  animation: 5s hold-to-enter;
+  transform-origin: left;
+  border: 5px solid black;
+  margin-left: -24px;
+  padding-left: 25px;
+  padding-right: 10px;
+  z-index: 0;
+}
+
+@keyframes roll-in{
+  0% { 
+    transform: translateX(-400%) rotate(-360deg); 
+  }
+  100% { 
+    transform: translateX(0) rotate(0deg); 
+  } 
+}
+
+@keyframes hold-to-enter{
+  0%{
+    transform: scaleX(0)
+    //@error: 0;
+    //width: 0px;
+  }
+  50%{
+    transform: scaleX(0);
+  }
+  100%{
+    transform: scaleX(1);
+    //width: 500px;
+  }
 }
 
 h1 {
