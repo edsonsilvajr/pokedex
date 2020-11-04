@@ -94,11 +94,17 @@
 .card-header-pressed {
   transform: translateX(-8px) translateY(-8px);
   box-shadow: 0px 8px 8px #00000029;
+  z-index: 2;
 }
 
 .card-info {
   animation: risefromtop .2s;
   transform-origin: top;
+  position: absolute;
+  background: white;
+  z-index: 1;
+  border: 1px solid black;
+  width: 564px;
   margin-top: -8px;
   margin-right: 8px;
 }
